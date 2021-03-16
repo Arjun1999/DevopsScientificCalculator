@@ -7,11 +7,10 @@ public class App
     public static void main(String args[])
     {
         int flag=0;
-        int ch=0;
+        int ch;
         double num1,num2;
         Scanner reader = new Scanner(System.in);
         System.out.println("Calculator System");
-        
         do
         {
             System.out.println("Option Menu");
@@ -23,12 +22,17 @@ public class App
             System.out.println("5) Exit");
             System.out.print("Enter your choice: ");
             
-            if(reader.hasNextInt())
-            {
-
-                ch = reader.nextInt();
-            }
+            ch = reader.nextInt();
+            System.out.println(ch);
             
+            // if(reader.hasNextInt())
+            // {
+
+            //     ch = reader.nextInt();
+            //     System.out.println(ch);
+            // }
+            
+            // System.out.println("Outside : ", ch);
             if(ch==5)
             {
                 flag = 1;
