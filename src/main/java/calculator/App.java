@@ -23,15 +23,23 @@ public class App
             System.out.println("5) Exit");
             System.out.print("Enter your choice: ");
             
-            while(reader.hasNext())
+            try 
             {
-                if(reader.hasNextInt())
-                {
-                    foundint++;
-                    ch = reader.nextInt();
-                    System.out.println(ch);
-                }
+            ch = Integer.parseInt(reader.nextLine());
+            } 
+            catch (NumberFormatException e) {
+            e.printStackTrace();
             }
+
+            // while(reader.hasNext())
+            // {
+            //     if(reader.hasNextInt())
+            //     {
+            //         foundint++;
+            //         ch = reader.nextInt();
+            //         System.out.println(ch);
+            //     }
+            // }
             
             // if(reader.hasNextInt())
             // {
