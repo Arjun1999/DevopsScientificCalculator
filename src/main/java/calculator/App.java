@@ -6,7 +6,8 @@ public class App
 {
     public static void main(String args[])
     {
-        int flag=0,ch;
+        int flag=0
+        int ch=0;
         double num1,num2;
         Scanner reader = new Scanner(System.in);
         System.out.println("Calculator System");
