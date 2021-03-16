@@ -5,6 +5,7 @@
     ansible_python_interpreter: /usr/bin/python
   tasks:
     - name: Pull DockerHub Image
+      become: true
       docker_image:
         name: av99/devops_scientific_calculator
         source: pull
