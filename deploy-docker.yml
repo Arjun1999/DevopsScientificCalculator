@@ -6,7 +6,7 @@
   tasks:
     - name: Pull DockerHub Image
       docker_image:
-        name: "av99/devops_scientific_calculator"
+        name: av99/devops_scientific_calculator
         source: pull
         
 # ---
