@@ -7,7 +7,8 @@ public class App
     public static void main(String args[])
     {
         int flag=0;
-        int ch;
+        int ch =0;
+        int foundint = 0;
         double num1,num2;
         Scanner reader = new Scanner(System.in);
         System.out.println("Calculator System");
@@ -22,8 +23,15 @@ public class App
             System.out.println("5) Exit");
             System.out.print("Enter your choice: ");
             
-            ch = reader.nextInt();
-            System.out.println(ch);
+            while(reader.hasNext())
+            {
+                if(reader.hasNextInt())
+                {
+                    foundint++;
+                    ch = reader.nextInt();
+                    System.out.println(ch);
+                }
+            }
             
             // if(reader.hasNextInt())
             // {
