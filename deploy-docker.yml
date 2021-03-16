@@ -7,7 +7,7 @@
     - name: Pull DockerHub Image
       become: true
       docker_image:
-        name: av99/devops_scientific_calculator
+        name: 'av99/devops_scientific_calculator:{{DOCKER_TAG}}'
         source: pull
         
 # ---
