@@ -1,5 +1,5 @@
 # we will use openjdk 8 
-FROM openjdk:8
+FROM openjdk:8-jre-alpine3.9
 # with alpine as it is a very small linux distro
 # -jre-alpine3.9
  

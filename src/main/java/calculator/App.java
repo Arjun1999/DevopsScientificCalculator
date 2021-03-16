@@ -23,7 +23,11 @@ public class App
             System.out.println("5) Exit");
             System.out.print("Enter your choice: ");
             
-            ch = reader.nextInt();
+            if(reader.hasNextInt())
+            {
+
+                ch = reader.nextInt();
+            }
             
             if(ch==5)
             {
