@@ -1,110 +1,73 @@
 package calculator;
 import java.util.*;
 
-// Temporary BS
 public class App
 {
     public static void main(String args[])
     {
         int flag=0;
-        int ch =0;
-        int foundint = 0;
-        double num1,num2;
+        int ch=0;
+        double num,num1,num2;
         Scanner reader = new Scanner(System.in);
-        System.out.println("Calculator System");
+        System.out.println("Scientific Calculator");
         do
         {
-            System.out.println("Option Menu");
+            System.out.println("Function Menu");
             System.out.println("");
-            System.out.println("1) Addition");
-            System.out.println("2) Subtraction");
-            System.out.println("3) Multiplication");
-            System.out.println("4) Division");
+            System.out.println("1) Square Root");
+            System.out.println("2) Factorial");
+            System.out.println("3) Natural Logarithm");
+            System.out.println("4) Power Function");
             System.out.println("5) Exit");
             System.out.print("Enter your choice: ");
-
-            // ch = reader.nextInt();
             
             try 
             {
-            ch = Integer.parseInt(reader.nextLine());
+                ch = Integer.parseInt(reader.nextLine());
             } 
-            catch (NumberFormatException e) {
-            e.printStackTrace();
+            catch (NumberFormatException e) 
+            {
+                e.printStackTrace();
             }
 
-            // while(reader.hasNext())
-            // {
-            //     if(reader.hasNextInt())
-            //     {
-            //         foundint++;
-            //         ch = reader.nextInt();
-            //         System.out.println(ch);
-            //     }
-            // }
-            
-            // if(reader.hasNextInt())
-            // {
-
-            //     ch = reader.nextInt();
-            //     System.out.println(ch);
-            // }
-            
-            // System.out.println("Outside : ", ch);
             if(ch==5)
             {
                 flag = 1;
             }
+            
             else
             {
                 switch(ch)
                 {
                 case 1:
-                System.out.println("Addition");
-                System.out.println("Enter two numbers");
-                System.out.print("Enter number 1: ");
-                num1 = Double.parseDouble(reader.nextLine());
-                // reader.nextDouble();
-                System.out.print("Enter number 2: ");
-                num2 = Double.parseDouble(reader.nextLine());
-                // num2 = reader.nextDouble();
-                System.out.println(num1+num2);
+                System.out.println("Square Root");
+                System.out.print("Enter a number : ");
+                num = Double.parseDouble(reader.nextLine());
+                System.out.println("The square root of " + num + " is " + sqroot(num) + "\n");
                 break;
                 
                 case 2:
-                System.out.println("Subtraction");
-                System.out.println("Enter two numbers");
-                System.out.print("Enter number 1: ");
-                // num1 = reader.nextDouble();
-                num1 = Double.parseDouble(reader.nextLine());
-                System.out.print("Enter number 2: ");
-                // num2 = reader.nextDouble();
-                num2 = Double.parseDouble(reader.nextLine());
-                System.out.println(num1-num2);
+                System.out.println("Factorial");
+                System.out.print("Enter a number : ");
+                num = Double.parseDouble(reader.nextLine());
+                System.out.println("The factorial of " + num + " is " + fact(num) + "\n");
                 break;
                 
                 case 3:
-                System.out.println("Multiplication");
-                System.out.println("Enter two numbers");
-                System.out.print("Enter number 1: ");
-                // num1 = reader.nextDouble();
-                num1 = Double.parseDouble(reader.nextLine());
-                System.out.print("Enter number 2: ");
-                // num2 = reader.nextDouble();
-                num2 = Double.parseDouble(reader.nextLine());
-                System.out.println(num1*num2);
+                System.out.println("Natural Logarithm");
+                System.out.print("Enter a number : ");
+                num = Double.parseDouble(reader.nextLine());
+                System.out.println("The natural logarithm of " + num + " is " + natlog(num) + "\n");
                 break;
                 
                 case 4:
-                System.out.println("Division");
+                System.out.println("Power Function");
                 System.out.println("Enter two numbers");
-                System.out.print("Enter number 1: ");
-                // num1 = reader.nextDouble();
+                System.out.print("Enter base: ");
                 num1 = Double.parseDouble(reader.nextLine());
-                System.out.print("Enter number 2: ");
-                // num2 = reader.nextDouble();
+                System.out.print("Enter exponent: ");
                 num2 = Double.parseDouble(reader.nextLine());
-                System.out.println(num1/num2);
+                System.out.println("The value of " + num1 + " raised to " + num2 + " is " + powerf(num1, num2) + "\n");
                 break;
                 default: System.out.println("Exiting program due to invalid input"); flag = 1;
                 }
@@ -112,4 +75,35 @@ public class App
             System.out.println("\n");
         }while(flag==0);
     }
+
+    public static double sqroot(double x)
+    {
+        return Math.sqrt(x);
+    }
+
+    public static double fact(double x)
+    {
+        double value = 1;
+        double n = x;
+        
+        while(n > 0)
+        {
+            value = value * n;
+            n = n - 1;
+        }
+        
+        return value;
+    }
+
+    public static double natlog(double x)
+    {
+        return Math.log(x);
+    }
+
+    public static double powerf(double b, double e)
+    {
+        return Math.pow(b, e);
+    }
+
 }
+
