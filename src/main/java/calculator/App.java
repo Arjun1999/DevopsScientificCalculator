@@ -78,7 +78,15 @@ public class App
 
     public static double sqroot(double x)
     {
-        return Math.sqrt(x);
+        if (x < 0) 
+        {
+            throw new IllegalArgumentException("Number cannot be negative.");
+        }
+
+        else
+        {
+            return Math.sqrt(x);
+        }
     }
 
     public static double fact(double x)
@@ -86,23 +94,47 @@ public class App
         double value = 1;
         double n = x;
         
-        while(n > 0)
+        if (x < 0) 
         {
-            value = value * n;
-            n = n - 1;
+            throw new IllegalArgumentException("Number cannot be negative.");
         }
-        
-        return value;
+
+        else
+        {
+            while(n > 0)
+            {
+                value = value * n;
+                n = n - 1;
+            }
+            
+            return value;
+        }
     }
 
     public static double natlog(double x)
     {
-        return Math.log(x);
+        if (x <= 0) 
+        {
+            throw new IllegalArgumentException("Number cannot be negative/zero.");
+        }
+
+        else
+        {
+            return Math.log(x);
+        }
     }
 
     public static double powerf(double b, double e)
     {
-        return Math.pow(b, e);
+        if (b == 0 && e <= 0) 
+        {
+            throw new IllegalArgumentException("When base is 0 exponent cannot be negative/zero.");
+        }
+        
+        else
+        {
+            return Math.pow(b, e);
+        }
     }
 
 }
