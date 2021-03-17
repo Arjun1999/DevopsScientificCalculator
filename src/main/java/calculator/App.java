@@ -63,9 +63,11 @@ public class App
                 System.out.println("Addition");
                 System.out.println("Enter two numbers");
                 System.out.print("Enter number 1: ");
-                num1 = reader.nextDouble();
+                num1 = Double.parseDouble(reader.nextLine());
+                // reader.nextDouble();
                 System.out.print("Enter number 2: ");
-                num2 = reader.nextDouble();
+                num2 = Double.parseDouble(reader.nextLine());
+                // num2 = reader.nextDouble();
                 System.out.println(num1+num2);
                 break;
                 
@@ -73,9 +75,11 @@ public class App
                 System.out.println("Subtraction");
                 System.out.println("Enter two numbers");
                 System.out.print("Enter number 1: ");
-                num1 = reader.nextDouble();
+                // num1 = reader.nextDouble();
+                num1 = Double.parseDouble(reader.nextLine());
                 System.out.print("Enter number 2: ");
-                num2 = reader.nextDouble();
+                // num2 = reader.nextDouble();
+                num2 = Double.parseDouble(reader.nextLine());
                 System.out.println(num1-num2);
                 break;
                 
@@ -83,9 +87,11 @@ public class App
                 System.out.println("Multiplication");
                 System.out.println("Enter two numbers");
                 System.out.print("Enter number 1: ");
-                num1 = reader.nextDouble();
+                // num1 = reader.nextDouble();
+                num1 = Double.parseDouble(reader.nextLine());
                 System.out.print("Enter number 2: ");
-                num2 = reader.nextDouble();
+                // num2 = reader.nextDouble();
+                num2 = Double.parseDouble(reader.nextLine());
                 System.out.println(num1*num2);
                 break;
                 
@@ -93,9 +99,11 @@ public class App
                 System.out.println("Division");
                 System.out.println("Enter two numbers");
                 System.out.print("Enter number 1: ");
-                num1 = reader.nextDouble();
+                // num1 = reader.nextDouble();
+                num1 = Double.parseDouble(reader.nextLine());
                 System.out.print("Enter number 2: ");
-                num2 = reader.nextDouble();
+                // num2 = reader.nextDouble();
+                num2 = Double.parseDouble(reader.nextLine());
                 System.out.println(num1/num2);
                 break;
                 default: System.out.println("Exiting program due to invalid input"); flag = 1;
