@@ -9,7 +9,8 @@
       docker_image:
         name: 'av99/devops_scientific_calculator:{{DOCKER_TAG}}'
         source: pull
-        
+
+# Testing for .war based deployment
 # ---
 # - hosts: localhost
 #   become: True
