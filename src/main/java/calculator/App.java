@@ -22,6 +22,8 @@ public class App
             System.out.println("4) Division");
             System.out.println("5) Exit");
             System.out.print("Enter your choice: ");
+
+            // ch = reader.nextInt();
             
             try 
             {
